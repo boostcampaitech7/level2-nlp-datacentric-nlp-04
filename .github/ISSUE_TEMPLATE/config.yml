@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+issue_templates:
+  - name: Experiment Template
+    description: For new experiments
+    file: experiment.md
+  - name: Feature Template
+    description: For new features
+    file: feature.md

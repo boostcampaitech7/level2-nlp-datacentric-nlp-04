@@ -1,0 +1,7 @@
+# 파일 경로 설정
+input_path: "../../data/train_cleaning_label_5sj_denoise_add_by_llm_wo_error.csv"
+
+# 증강 반복 횟수 설정
+iterations:
+  combine: 800
+  combine_reversed: 200

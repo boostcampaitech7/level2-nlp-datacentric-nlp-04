@@ -1,0 +1,31 @@
+# config.yaml
+
+# 파일 경로 설정
+paths:
+  train_path: "../../data/5_base_noise_detected_train.csv"
+  test_path: "../../data/5_base_noise_detected_test.csv"
+  checkpoint_dir: "./checkpoint"
+  output_path: "../../data/denoised_results_relabel.csv"
+
+# 모델 및 토크나이저 설정
+model:
+  name: "kakaobank/kf-deberta-base"
+  # 추론만 할경우 False를 입력합니다.
+  train_checkpoint: true
+
+# 데이터 전처리 설정
+tokenization:
+  padding: "max_length"
+  truncation: true
+
+# 학습 설정
+training_args:
+  output_dir: "./checkpoint"
+  evaluation_strategy: "epoch"
+  save_strategy: "epoch"
+  save_steps: 500
+  save_total_limit: 2
+  learning_rate: 5e-6
+  per_device_train_batch_size: 8
+  per_device_eval_batch_size: 8
+  num_train_epochs: 10

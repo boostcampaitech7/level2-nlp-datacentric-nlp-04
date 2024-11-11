@@ -1,0 +1,24 @@
+# 경로 설정
+paths:
+  few_shot_data: "../../data/5_base_noise_detected_test_with_predictions.csv"
+  denoise_data: "../../data/5_base_noise_detected_train.csv"
+  save_path: "denoised_results.csv"
+
+# 모델 설정
+model:
+  name: "LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct"
+  max_length: 512
+  max_new_tokens: 20
+  top_k: 50
+  top_p: 0.9
+  temperature: 0.7
+  no_repeat_ngram_size: 2
+  num_return_sequences: 1
+
+# 노이즈 설정
+noise:
+  level: 0.5
+  ascii_ratio: 0.93  # ASCII 범위에서 선택할 확률
+
+# 중간 저장 빈도
+save_frequency: 100
